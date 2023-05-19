@@ -2,7 +2,7 @@
     margin: 0;
 }
 .login-background{
-    background-color: #8ecae6;
+    background-color: #0077b6;
 }
 .main-login{
     display: flex;
@@ -19,7 +19,7 @@
     
 }
 .right-login{
-    background-color: #0077b6;
+    background-color: #8ecae6;
     height: 450px;
     width: 400px;
     border-radius: 0 25px 25px 0;
@@ -28,14 +28,28 @@
     margin: 50px 10px 10px 25px;
 }
 .login-content p, input, button {
-    font-size: 20px;
+    font-size: 15px;
     border-radius: 25px;
-    border: none;
-    margin: 20px 10px 3px 25px;
+    margin: 2px 0 3px 21px;
+}
+.login-content button, input{
+    width: 300px;
+    padding: 10px;
+}
+.right-login #Forgot, #Register{
+    font-size: 15px;
+    margin: 1px 0 0 45px ;
+
 }
 .login-content button{
-    padding: 5px;
-    margin: 20px 10px 3px 60px;
+    width: 321px;
+    color: white;
+    background-color: #023047;
+    border: none;
+    border-radius: 5px;
+}
+.login-content input{
+    text-align: center;
 }
 .container {
     background-color: gray;
