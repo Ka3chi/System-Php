@@ -38,8 +38,7 @@
 }
 .right-login #Forgot, #Register{
     font-size: 15px;
-    margin: 1px 0 0 45px ;
-
+    margin: 5px 0 0 45px ;
 }
 .login-content button{
     width: 321px;
@@ -50,6 +49,62 @@
 }
 .login-content input{
     text-align: center;
+    margin-bottom: 15px;
+}
+.back-btn a{
+    display: flex;
+    background-color: #023047;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    width: 50px;
+    margin-top: 25px;
+    margin-left: 25px;
+    font-size: 15px;
+    justify-content: center;
+
+}
+.register-content form{
+    background-color: cyan;
+    width: 400px;
+    height: 400px;
+    margin: auto;
+    border-radius: 10px;
+    margin-top: 100px;
+    padding: 20px;
+}
+.register-content p, input, button{
+    border-radius: 5px;
+    font-size: 15px;
+}
+.register-content p{
+    margin: 3px 0 10px 20px;
+}
+.register-content button{
+    margin-top: 20px;
+    width: 323px;
+    padding: 10px;
+}
+.forgot-content{
+    background-color: cyan;
+    width: 350px;
+    height: 150px;
+    margin: auto;
+    border-radius: 10px;
+    margin-top: 100px;
+    padding: 20px;
+}
+.forgot-content p, input, button{
+    border-radius: 5px;
+    font-size: 15px;
+}
+.forgot-content p{
+    margin: 3px 0 10px 20px;
+}
+.forgot-content button{
+    margin-top: 10px;
+    width: 323px;
+    padding: 10px;
 }
 .container {
     background-color: gray;
