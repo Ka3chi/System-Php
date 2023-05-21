@@ -20,8 +20,8 @@
                 <input type="text" value="" ><br>
                 <button>Login</button>
             </form>
-            <p id="Forgot"><a href="ForgotPage.html">Forgot Password?</a></p>
-            <p id="Register">Don't have an account? <a href="RegisterPage.html">Register here</a></p>
+            <p id="Forgot"><a href="ForgotPage.php">Forgot Password?</a></p>
+            <p id="Register">Don't have an account? <a href="RegisterPage.php">Register here</a></p>
         </div>
     </div>
 </body>

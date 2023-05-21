@@ -5,22 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Forgot Password</title>
+    <title>Register</title>
 </head>
 <body>
-    <div class="main-forgot">
+    <div class="main-register">
         <div class="back-btn">
-            <a href="Login.html">Back</a>
+            <a href="Login.php">Back</a>
         </div>
-        <div class="forgot-content">
+        <div class="register-content">
             <form action="">
                 <p>Username:</p>
+                <input type="text" value="">
+                <p>Password:</p>
+                <input type="text" value="">
+                <p>Confirm Password:</p>
                 <input type="text" value=""><br>
 
-                <button>Check</button>
+                <button>Register</button>
             </form>
         </div>
-
-    </div>
 </body>
 </html>
