@@ -8,19 +8,18 @@
     <title>Forgot Password</title>
 </head>
 <body>
-    <div class="main-forgot">
-        <div class="back-btn">
-            <a href="Login.php">Back</a>
-        </div>
-        <div class="forgot-content">
-            <form action="">
-                <p>Username:</p>
-                <input type="text" value=""><br>
-
-                <button>Check</button>
-            </form>
-        </div>
-
+    <div class="back-btn">
+        <a href="Login.php">Back</a>
     </div>
+        <div class="forgot-background">
+            <div class="forgot-content">
+                <form action="">
+                    <p>Username:</p>
+                    <input type="text" value=""><br>
+
+                    <button>Check</button>
+                </form>
+            </div>
+        </div>
 </body>
 </html>

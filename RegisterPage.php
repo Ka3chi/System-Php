@@ -8,21 +8,22 @@
     <title>Register</title>
 </head>
 <body>
-    <div class="main-register">
-        <div class="back-btn">
-            <a href="Login.php">Back</a>
-        </div>
-        <div class="register-content">
-            <form action="">
-                <p>Username:</p>
-                <input type="text" value="">
-                <p>Password:</p>
-                <input type="text" value="">
-                <p>Confirm Password:</p>
-                <input type="text" value=""><br>
+    <div class="back-btn">
+        <a href="Login.php">Back</a>
+    </div>
+        <div class="register-background">
+            <div class="register-content">
+                <form action="">
+                    <p>Username:</p>
+                    <input type="text" value="">
+                    <p>Password:</p>
+                    <input type="text" value="">
+                    <p>Confirm Password:</p>
+                    <input type="text" value=""><br>
 
-                <button>Register</button>
-            </form>
-        </div>
+                    <button>Register</button>
+                </form>
+            </div>
+    </div>
 </body>
 </html>
