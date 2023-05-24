@@ -19,11 +19,11 @@
                     <p>Username:</p>
                     <input type="text" value="" name="UN">
                     <p>Password:</p>
-                    <input type="text" value="" name="PS"><br>
+                    <input type="text" value="" name="PS">
                     <button type="submit" >Login</button>
+                    <p id="Forgot"><a href="ForgotPage.php">Forgot Password?</a></p>
+                    <p id="Register">Don't have an account? <a href="RegisterPage.php">Register here</a></p>
                 </form>
-                <p id="Forgot"><a href="ForgotPage.php">Forgot Password?</a></p>
-                <p id="Register">Don't have an account? <a href="RegisterPage.php">Register here</a></p>
             </div>
         </div>
         <?php
