@@ -15,7 +15,7 @@
             <div class="forgot-content">
                 <form action="">
                     <p>Username:</p>
-                    <input type="text" value=""><br>
+                    <input type="username" value="UN" required value=""><br>
 
                     <button>Check</button>
                 </form>
