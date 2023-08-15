@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+}
+form > p, input, button{
+    font-size: 15px;
+    border-radius: 5px;
+    margin: 5px 25px 1px 40px;
+    width: 300px ;
+}
+form > input, button{
+    padding: 10px;
+}
+form > button{
+    width: 323px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.login-background{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #0077b6;
+}
+.login-content{
+    display: flex;
+    flex-direction: column;
+}
+.login-main{
+    display: flex;
+    flex-direction: row;    
+}
+.left-login{
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    height: 400px;
+    width: 400px;
+    padding: 25px 25px 25px 25px;
+    border-radius: 25px 0 0 25px;
+}
+.right-login{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #8ecae6;
+    height: 450px;
+    width: 400px;
+    border-radius: 0 25px 25px 0;
+}
+.right-login #Forgot, #Register{
+    font-size: 15px;
+    margin-top: 4px;
+}
+.back-btn a{
+    position: absolute;
+    background-color: #023047;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    width: 50px;
+    margin-top: 25px;
+    margin-left: 25px;
+    font-size: 15px;
+    text-align: center;
+
+}
+.register-background{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background-color: #0077b6;
+}
+.register-content{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: cyan;
+    width: 400px;
+    height: 400px;
+    border-radius: 10px;
+    margin-top: 100px;
+    padding: 15px;
+}
+.forgot-background{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background-color: #0077b6;
+}
+.forgot-content{
+    background-color: cyan;
+    width: 400px;
+    height: 150px;
+    border-radius: 10px;
+    margin-top: 150px;
+    padding: 15px;
+}
+
+
+
+

@@ -9,13 +9,13 @@
 </head>
 <body>
     <div class="back-btn">
-        <a href="Login.php">Back</a>
+        <a href="login.php">Back</a>
     </div>
         <div class="forgot-background">
             <div class="forgot-content">
                 <form action="">
                     <p>Username:</p>
-                    <input type="username" value="UN" required value=""><br>
+                    <input type="username" value="" required value=""><br>
 
                     <button>Check</button>
                 </form>

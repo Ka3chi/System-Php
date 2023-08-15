@@ -1,10 +1,11 @@
 <?php
 session_start();
 
-    include("connection.php");
+    include("./connection.php");
     include("function.php");
     
     if($_SERVER['REQUEST_METHOD'] == "POST"){
+        
         //variables
         $username = $_POST['UN'];
         $password1 = $_POST['PS'];
@@ -20,7 +21,7 @@ session_start();
                         $user_data = mysqli_fetch_assoc($result);
                         if($user_data['password'] === $password1){
                             $_SESSION['username'] = $user_data['username'];
-                            header("Location: Home.php");
+                            header("Location: dashboard.php");
                             die;
                         }
                     }
@@ -49,7 +50,7 @@ session_start();
                 <img src="image/login-image.jpg" alt="login-image">
             </div>
             <div class="right-login">
-                <form action="Login.php" method="post" class="login-content" autocomplete="off">
+                <form action="index.php" method="post" class="login-content" autocomplete="off">
                     <p>Username:</p>
                     <input type="username" value="" name="UN">
                     <p>Password:</p>

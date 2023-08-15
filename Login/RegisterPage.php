@@ -20,7 +20,7 @@ session_start();
 
                 mysqli_query($con, $query);
 
-                header("Location: Login.php");
+                header("Location: index.php");
                 die;
             }
         }
@@ -42,7 +42,7 @@ session_start();
 </head>
 <body>
     <div class="back-btn">
-        <a href="Login.php">Back</a>
+        <a href="login.php">Back</a>
     </div>
         <div class="register-background">
             <div class="register-content">

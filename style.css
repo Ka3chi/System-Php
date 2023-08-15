@@ -1,131 +1,170 @@
 * {
     margin: 0;
+    padding: 0;
 }
-form > p, input, button{
-    font-size: 15px;
-    border-radius: 5px;
-    margin: 5px 25px 1px 40px;
-    width: 300px ;
+/* Import the font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: white;
 }
-form > input, button{
+
+h1 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+}
+.sidenav{ 
+    background-color: #48cae4;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 215px;
+    padding: 10px 14px;
+    transition: all 0.3s ease;
+    z-index: 100;
+}
+.sidenav .text, .sidenav .icon{
+    color: black;
+    transition: all 0.2s ease;
+}
+header{
+    position: relative;
+}
+.image-logo{
+    display: flex;
+    height: 60px;
+    width: 60px;
+}
+.text-image-logo{
+    font-size: 20px;
     padding: 10px;
 }
-form > button{
-    width: 323px;
-    margin-top: 20px;
-    margin-bottom: 10px;
-}
-.login-background{
+.Logo{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: #0077b6;
-}
-.login-content{
-    display: flex;
-    flex-direction: column;
-}
-.login-main{
-    display: flex;
-    flex-direction: row;    
-}
-.left-login{
-    display: flex;
     justify-content: center;
-    background-color: white;
-    height: 400px;
-    width: 400px;
-    padding: 25px 25px 25px 25px;
-    border-radius: 25px 0 0 25px;
-}
-.right-login{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    background-color: #8ecae6;
-    height: 450px;
-    width: 400px;
-    border-radius: 0 25px 25px 0;
-}
-.right-login #Forgot, #Register{
-    font-size: 15px;
-    margin-top: 4px;
-}
-.back-btn a{
-    position: absolute;
-    background-color: #023047;
-    color: white;
-    border-radius: 5px;
-    padding: 5px;
-    width: 50px;
     margin-top: 25px;
-    margin-left: 25px;
-    font-size: 15px;
-    text-align: center;
-
+    padding-bottom: 25px;
+    padding-left: 10px;
 }
-.register-background{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100vh;
-    background-color: #0077b6;
-}
-.register-content{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    background-color: cyan;
-    width: 400px;
-    height: 400px;
-    border-radius: 10px;
-    margin-top: 100px;
-    padding: 15px;
-}
-.forgot-background{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100vh;
-    background-color: #0077b6;
-}
-.forgot-content{
-    background-color: cyan;
-    width: 400px;
-    height: 150px;
-    border-radius: 10px;
-    margin-top: 150px;
-    padding: 15px;
-}
-.error {
-    width: 92%; 
-    margin: 0px auto; 
-    padding: 10px; 
-    border: 1px solid #a94442; 
-    color: #a94442; 
-    background: #f2dede; 
-    border-radius: 5px; 
-    text-align: left;
-}
-.container {
-    background-color: gray;
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    flex-wrap: wrap;
-}
-.main-head{
-    background-color: brown;
-    display: flex;
-    flex: 1 1 80%;
-    height: 20%;
-}
-.side-nav{ 
+.sidenav header .toggle{
+    position: absolute;
+    top: 20px;
+    right: -40px;
+    transform: translate(-50%) rotate(180deg);
+    height: 25px;
+    width: 25px;
     background-color: blue;
+    color: black;
+    border-radius: 50%;
     display: flex;
-    flex: 1 1 20%;
-    width: 10%;
-    
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
+.sidenav .icon{
+    min-width: 50px;
+    border-radius: 6px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+.sidenav li{
+    height: 50px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+.sidenav a{
+    list-style: none;
+    height: 100%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+.sidenav li:hover{
+    background-color: white;
+    border-radius: 5px;
+}
+.sidenav li.active{
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+.sidenav.close{
+    width: 55px;
+}
+.sidenav.close .toggle{
+    transform: translateY(-50%) rotate(0deg);
+    top: 25px;
+    right: -25px;
+}
+.sidenav .menu{
+    height: calc(100% - 55px);
+}
+.sidenav.close .text{
+    display: none;
+} 
+.main-content{
+    margin-left: 100px;
+    padding: 20px;
+    transition: margin-left 0.3s;
+    flex: 1; 
+    transition: margin-left 0.3s; /* Transition for margin */
+}
+.page {
+    display: none;
+}
+.page.active {
+    display: block;
+}
+.home{
+    flex: 1;
+}
+/* responsive */
+@media screen and (max-width: 600px) {
+    .container {
+      flex-direction: column;
+    }
+  
+    .side-nav {
+      /* Your other styles */
+      width: 60px; /* Set collapsed width */
+      height: auto;
+      padding: 10px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    /* Add this rule to adjust main content size */
+    .main-content {
+      flex: 1; /* Allow main content to take full width */
+      padding: 10px; /* Adjust padding for collapsed state */
+    }
+  
+    /* Other styles remain the same */
+  }

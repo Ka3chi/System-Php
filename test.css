@@ -1,0 +1,22 @@
+/* Styling for the sidebar */
+nav {
+    width: 250px; /* Set initial width */
+    transition: width 0.3s ease; /* Apply smooth transition effect */
+  }
+  
+  /* Adjust sidebar width when the "close" class is present */
+  nav.close {
+    width: 0;
+  }
+  
+  /* Styling for the main content area */
+  .content {
+    margin-left: 260px; /* Initial margin to accommodate the expanded sidebar */
+    transition: margin-left 0.3s ease; /* Apply smooth transition effect */
+  }
+  
+  /* Adjust content margin when the sidebar is collapsed */
+  .content.collapsed {
+    margin-left: 10px; /* Adjust margin based on your design */
+  }
+  
