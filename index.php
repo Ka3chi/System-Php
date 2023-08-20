@@ -9,7 +9,6 @@
     <title>Dashboard</title>
 </head>
 <body>
-    <div class="container">
     <nav class="sidenav close">
         <header>
             <div class="Logo">
@@ -21,7 +20,8 @@
                     </div>
             </div>
                 <i class='bx bxs-chevron-right toggle'></i>
-        </header>         
+        </header>
+
             <!-- navigations starts here -->
             <div class="menu">
             <ul class="btn-links">
@@ -53,21 +53,23 @@
             <a href="./test.php">click me</a>
             </div>
     </nav>
-    <!-- Main-content -->
-    <div class="main-content">
-        <div id="home" class="page">
-            <h1>Dashboard</h1>
-        </div>
-        <div id="usermanagement" class="page">
-            <h1>usermanagement</h1>
-        </div>
-        <div id="settings" class="page">
-            <h1>settings</h1>
-        </div>
-        <div id="about system" class="page">
-            <h1>about system</h1>
-        </div>
     </div>
+    <!-- Main-content -->
+    <div class="content">
+        <div class="active-content">
+            <div id="home" class="page">
+                <h1>Dashboard</h1>
+            </div>
+            <div id="usermanagement" class="page">
+                <h1>usermanagement</h1>
+            </div>
+            <div id="settings" class="page">
+                <h1>settings</h1>
+            </div>
+            <div id="about system" class="page">
+                <h1>about system</h1>
+            </div>
+        </div>
     </div>
     
     <script src="script.js"></script>

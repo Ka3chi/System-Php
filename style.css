@@ -128,43 +128,20 @@ header{
 .sidenav.close .text{
     display: none;
 } 
-.main-content{
-    margin-left: 100px;
-    padding: 20px;
-    transition: margin-left 0.3s;
-    flex: 1; 
-    transition: margin-left 0.3s; /* Transition for margin */
-}
 .page {
     display: none;
 }
 .page.active {
     display: block;
 }
-.home{
-    flex: 1;
+.close{
+    margin-left: 0px;
 }
-/* responsive */
-@media screen and (max-width: 600px) {
-    .container {
-      flex-direction: column;
-    }
-  
-    .side-nav {
-      /* Your other styles */
-      width: 60px; /* Set collapsed width */
-      height: auto;
-      padding: 10px 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    /* Add this rule to adjust main content size */
-    .main-content {
-      flex: 1; /* Allow main content to take full width */
-      padding: 10px; /* Adjust padding for collapsed state */
-    }
-  
-    /* Other styles remain the same */
-  }
+.active-content{
+    margin-left: 130px;
+
+}
+#home{
+    background-color: orange;
+    padding: 20px;
+}

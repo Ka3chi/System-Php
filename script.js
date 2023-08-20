@@ -1,20 +1,12 @@
-// For side navigation
-// const body = document.querySelector('body'),
-//         sidenav = body.querySelector('nav'),
-//         toggle = body.querySelector(".toggle");
-// toggle.addEventListener("click" , () =>{
-//     sidenav.classList.toggle("close");
-    
-// })
-const body = document.querySelector('body'),
-      sidenav = body.querySelector('nav'),
-      toggle = body.querySelector(".toggle"),
-      content = body.querySelector('.content');
 
-toggle.addEventListener("click", () => {
-  sidenav.classList.toggle("close");
-  content.classList.toggle("collapsed"); // Toggle the class on main content
-});
+const body = document.querySelector('body'),
+        sidenav = body.querySelector('nav'),
+        toggle = body.querySelector(".toggle"),
+        content = body.querySelector('.content');
+toggle.addEventListener("click" , () =>{
+    sidenav.classList.toggle("close");
+    content.classList.toggle("active-content");
+})
 
 
 const navlinks = document.querySelectorAll(".navlink");
