@@ -44,32 +44,40 @@
                         </a>
                     </li>
                 <li class="navlink ">
-                    <a href="#" onclick="openPage('about system')">
+                    <a href="#" onclick="openPage('aboutsystem')">
                         <i class="bx bx-info-circle icon"></i>
                         <span class="text">About System</span>
                         </a>
                     </li> 
             </ul>
-            <a href="./test.php">click me</a>
+            <a href="./Login/login.php">click me</a>
             </div>
     </nav>
     </div>
     <!-- Main-content -->
     <div class="content">
-        <div class="active-content">
             <div id="home" class="page">
                 <h1>Dashboard</h1>
+                <p>Welcome User!</p>
+                
             </div>
             <div id="usermanagement" class="page">
-                <h1>usermanagement</h1>
+                <h1>Usermanagement</h1>
+                <table class="usertb">
+                    <tr>
+                    <th>Username</th>
+                    <th>Password</th>
+                    <th>Role</th>
+                    <th>Actions</th>
+                    </tr>
+                </table>
             </div>
             <div id="settings" class="page">
                 <h1>settings</h1>
             </div>
-            <div id="about system" class="page">
+            <div id="aboutsystem" class="page">
                 <h1>about system</h1>
             </div>
-        </div>
     </div>
     
     <script src="script.js"></script>

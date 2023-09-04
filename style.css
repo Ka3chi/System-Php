@@ -1,9 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 * {
     margin: 0;
     padding: 0;
 }
 /* Import the font from Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 body {
   font-family: 'Roboto', sans-serif;
@@ -137,11 +137,39 @@ header{
 .close{
     margin-left: 0px;
 }
-.active-content{
-    margin-left: 130px;
+.content{
+    margin-left: 80px;
+    transition: all 0.3s ease;
+}
+.content.active-content{
+    margin-left: 240px;
+    transition: all 0.3s ease;
 
 }
 #home{
     background-color: orange;
+    padding: 10px 10px 10px 30px;
+}
+#usermanagement{
+    background-color: blue;
+    padding: 10px 10px 10px 30px;
+}
+#settings{
+    background-color: cyan;
+    padding: 10px 10px 10px 30px;
+}
+#aboutsystem{
+    background-color: gray;
+    padding: 10px 10px 10px 30px;
+}
+/* pages start here */
+#usermanagement{
+    background-color: cyan;
     padding: 20px;
 }
+/* tables start here */
+table, th, td{
+    border: 1px solid;
+    padding: 10px;
+}
+

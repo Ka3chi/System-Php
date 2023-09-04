@@ -24,11 +24,6 @@ navlinks.forEach(navlink => {
     })
 })
 
-const deactivateButton = document.querySelector("#deactivate-button");
-deactivateButton.addEventListener("click", () => {
-    deactivateActiveClass();
-})
-
 
 // Function to open a page and show its content
 function openPage(pageId) {
@@ -40,9 +35,5 @@ function openPage(pageId) {
   
     var page = document.getElementById(pageId);
     page.classList.add("active");
-  }
-
-//side nav
-
-
-  
+}
+ 
