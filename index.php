@@ -1,3 +1,7 @@
+<?php 
+    session_start();
+    include("./Login/connection.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -50,7 +54,7 @@
                         </a>
                     </li> 
             </ul>
-            <a href="./Login/login.php">click me</a>
+            <a href="test.php">click me</a>
             </div>
     </nav>
     </div>
@@ -62,15 +66,115 @@
                 
             </div>
             <div id="usermanagement" class="page">
-                <h1>Usermanagement</h1>
-                <table class="usertb">
-                    <tr>
-                    <th>Username</th>
-                    <th>Password</th>
-                    <th>Role</th>
-                    <th>Actions</th>
-                    </tr>
+                <div class="container1">
+                <h1>Usermanagement</h1><br>
+                    <a href="#" onclick="openModal(1)" id="usermodal" class="adduser">Add User</a>
+                </div>
+                <div class="usertb">
+                <table>
+                    <thead>
+                        <tr>
+                        <th>ID</th>
+                        <th>Username</th>
+                        <th>email</th>
+                        <th>Password</th>
+                        <th>Role</th>
+                        <th>Actions</th>
+                        </tr>
+                        <tbody>
+                            <?php
+                            $Sql="Select * from tbl_user";
+                            $result = mysqli_query($con,$Sql);
+                            if($result){
+                                while($row = mysqli_fetch_assoc($result)){
+                                    $id = $row['id'];
+                                    $username = $row['username'];
+                                    $email = $row['email'];
+                                    $password = $row['password'];
+                                    $role = $row['role'];
+                                    echo ' <tr>
+                                        <th>'.$id.'</th>
+                                        <td>'.$username.'</td>
+                                        <td>'.$email.'</td>
+                                        <td>'.$password.'</td>
+                                        <td>'.$role.'</td>
+                                        <td>                            
+                                        <a href="#" onclick="openModal(2)" id="usermodal" class="update">Update</a>
+                                        <a href="delete.php?deleteid='.$id.'" class="delete">Delete</a>
+                                        </td>
+                                    </tr>';
+                                }
+                            }
+                            ?>
+                            <div id="myModal1" class="modal">
+                                <!-- Modal start here -->
+                                <div class="modal-content">
+                                <span class="close1" onclick="closeModal(1)">&times;</span><br>
+                                <h1>Add New User</h1>
+                                <?php
+
+                                    include("./Login/function.php");
+                                    
+                                    if ($_SERVER['REQUEST_METHOD'] == "POST") {
+                                        // Variables
+                                        $username = $_POST['username'];
+                                        $email = $_POST['email'];
+                                        $password = $_POST['password'];
+                                        $role = $_POST['role'];
+                                    
+                                        if (!empty($username) && !empty($email) && !empty($password) && !empty($role) && !is_numeric($username)) {
+                                            // Use prepared statements to prevent SQL injection
+                                            $query = "INSERT INTO tbl_user (username, email, password, role) VALUES (?, ?, ?, ?)";
+                                            $stmt = mysqli_prepare($con, $query);
+                                    
+                                            mysqli_stmt_bind_param($stmt, "ssss", $username, $email, $password, $role);
+                                            
+                                            // Execute the statement
+                                            if (mysqli_stmt_execute($stmt)) {
+                                                echo '<script>alert("User created successfully!");</script>';
+                                                                                            
+                                            } else {
+                                                echo "Error: " . mysqli_stmt_error($stmt);
+                                            }
+                                    
+                                            mysqli_stmt_close($stmt);
+                                            mysqli_close($con);
+                                        }
+                                    }
+                                       
+                                ?>
+                                <form action="" method="post" autocomplete="off" onsubmit="submitForm(event)">
+                                    <p>Username:</p>
+                                    <input type="text" value="" name="username" required>
+                                    <p>Email:</p>
+                                    <input type="text" value="" name="email" required>
+                                    <p>Password:</p>
+                                    <input type="password" value="" name="password" required>
+                                    <p>Role:</p>
+                                    <select type="text" name="role">
+                                        <option value="admin">Admin</option>
+                                        <option value="registrar">Registrar</option>
+                                    </select><br>
+
+                                    <button type="submit">Create User</button>
+                                </form>
+                                                                
+                                
+                            </div>
+                            </div>
+                            <div id="myModal2" class="modal">
+                                <!-- Modal start here -->
+                                <div class="modal-content">
+                                <span class="close1" onclick="closeModal(2)">&times;</span><br>
+                                <h1>Update the user</h1>
+                            </div>
+                            
+                            
+                                                                                   
+                        </tbody>
+                    </thead>
                 </table>
+                </div>
             </div>
             <div id="settings" class="page">
                 <h1>settings</h1>

@@ -47,7 +47,7 @@ session_start();
     <div class="login-content">
         <div class="login-main">
             <div class="left-login">
-                <img src="image/login-image.jpg" alt="login-image">
+                <img src="../image/login-image.jpg" alt="login-image">
             </div>
             <div class="right-login">
                 <form action="index.php" method="post" class="login-content" autocomplete="off">
