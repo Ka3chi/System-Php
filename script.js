@@ -39,6 +39,7 @@ function openPage(pageId) {
     page.classList.add("active");
 }
 
+//active page content
 window.addEventListener("load", function() {
     openPage("usermanagement");
 });
